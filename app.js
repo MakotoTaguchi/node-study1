@@ -14,7 +14,7 @@ function getFromClient(request, response) {
     response.writeHead(200, {
         'Content-Type': 'text/html'
     });
-    response.write(data);
+    response.write(content);
     response.end();
 
     // fs.readFile('./index.html', 'utf-8',
