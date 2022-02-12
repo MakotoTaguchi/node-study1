@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+h1{
+    font-size: 32px;
+    color: #eee;
+    text-align: right;
+    margin: 0;
+}
+
+body{
+    font-size: 16px;
+    color: #999;
+    margin: 5px;
+}
+
+p{
+    margin: 0 20px;
+}
