@@ -28,7 +28,7 @@ function getFromClient(request, response) {
             response.end();
             break;
 
-        case '/other.ejs':
+        case '/other':
             var content = ejs.render(other_page, {
                 title: "Index",
                 content: "これは新しく用意したページです。",
