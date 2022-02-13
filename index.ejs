@@ -22,10 +22,18 @@
         <p>これは、EJSを使ったWebページです。</p> -->
         <p><%=content %></p>
         <!-- <p><a href="/other">Other Pageに移動 &gt;&gt;</a></p> -->
-        <form action="/other" method="post">
+        <!-- <form action="/other" method="post">
             <input type="text" name="msg" id="" class="form-control">
             <input type="submit" value="Click" class="btn btn-primary">
-        </form>
+        </form> -->
+        <table class="table">
+            <% for(var key in data) { %>
+            <tr>
+                <th><%= key %></th>
+                <td><%= data[key] %></td>
+            </tr>
+            <% } %>
+        </table>
     </div>
 </body>
 
