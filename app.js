@@ -13,13 +13,22 @@ server.listen(3000);
 console.log('Server start!');
 
 function getFromClient(request, response) {
-    var url_parts = url.parse(request.url);
+    var url_parts = url.parse(request.url, true);
     switch (url_parts.pathname) {
 
         case '/':
+            // var content = ejs.render(index_page, {
+            //     title: "Indexページ",
+            //     content: "これはテンプレートを使ったサンプルページです。",
+            // });
+            var content = "これはIndexページです。";
+            var query = url_parts.query;
+            if (query.msg != undefined) {
+                content += 'あなたは、「' + query.msg + '」と送りました。';
+            }
             var content = ejs.render(index_page, {
-                title: "Indexページ",
-                content: "これはテンプレートを使ったサンプルページです。",
+                title: "index",
+                content: content,
             });
             response.writeHead(200, {
                 'Content-Type': 'text/html'
