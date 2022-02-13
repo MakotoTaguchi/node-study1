@@ -21,7 +21,11 @@
         <!-- <p>This is Index Page</p>
         <p>これは、EJSを使ったWebページです。</p> -->
         <p><%=content %></p>
-        <p><a href="/other">Other Pageに移動 &gt;&gt;</a></p>
+        <!-- <p><a href="/other">Other Pageに移動 &gt;&gt;</a></p> -->
+        <form action="/other" method="post">
+            <input type="text" name="msg" id="" class="form-control">
+            <input type="submit" value="Click" class="btn btn-primary">
+        </form>
     </div>
 </body>
 
