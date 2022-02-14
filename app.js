@@ -64,13 +64,18 @@ function response_index(request, response) {
     }
 }
 
-function write_index(request,response) {
-    var msg="※伝言を表示します。";
-    var content=ejs.render(index_page,{
-        title:"Index",
-        content:msg,
-        data:data
-    })
+function write_index(request, response) {
+    var msg = "※伝言を表示します。";
+    var content = ejs.render(index_page, {
+        title: "Index",
+        content: msg,
+        data: data,
+    });
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    response.write(content);
+    response.end();
 }
 
 var data2 = {
