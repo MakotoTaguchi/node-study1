@@ -92,6 +92,7 @@ function getCookie(key, request) {
     for (var i in data) {
         if (data[i].trim().startsWith(key + '=')) {
             var result = data[i].trim().substring(key.length + 1);
+            return unescape(result);
         }
     }
     return '';
