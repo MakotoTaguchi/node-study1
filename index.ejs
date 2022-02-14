@@ -26,16 +26,20 @@
             <input type="text" name="msg" id="" class="form-control">
             <input type="submit" value="Click" class="btn btn-primary">
         </form> -->
-        <table class="table">
+        <% var id = 0; %>
+        <% for(var key in data) { %>
+        <%- include('data_item',{id:++id,key:key,val:[data[key]]}) %>
+        <% } %>
+        <!-- <table class="table">
             <% var id = 0; %>
-            <% for(var key in data) { %>
-            <!-- <tr>
+            <% for(var key in data) { %> -->
+        <!-- <tr>
                 <th><%= key %></th>
                 <td><%= data[key] %></td>
             </tr> -->
-            <%- include('data_item',{id:++id,key:key,val:[data[key]]}) %>
+        <!-- <%- include('data_item',{id:++id,key:key,val:[data[key]]}) %>
             <% } %>
-        </table>
+        </table> -->
     </div>
 </body>
 
